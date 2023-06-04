@@ -1,0 +1,29 @@
+{
+  "name": "soa-js-arqsw",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/benja-iag/SOA-js-arqSW.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/benja-iag/SOA-js-arqSW/issues"
+  },
+  "homepage": "https://github.com/benja-iag/SOA-js-arqSW#readme",
+  "dependencies": {
+    "prompt-sync": "^4.2.0",
+    "sqlite3": "^5.1.6",
+    "ssh2": "^1.13.0",
+    "ts-node": "^10.9.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "typescript": "^5.1.3"
+  }
+}
