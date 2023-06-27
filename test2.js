@@ -17,9 +17,9 @@ sshClient.on('ready', () => {
         }
         stream.write("00010sinitbenj2")
         stream.on("data", (data) => {
-            console.log(`[Services-benj2] \tReceived from SOCKS server:`, data.toString())
-            option.func(data.toString())
-            stream.write("00010benj2"+"/")
+            const response = data.toString().substring(10).split("|")[1];
+            console.log(`[Services-benj2] \tData:`, data.toString())
+            stream.write("00010benj2"+response)
         })
         stream.on("close", () => {
         sshClient.end()
