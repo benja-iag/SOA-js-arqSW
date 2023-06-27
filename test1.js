@@ -1,9 +1,9 @@
 const prompt = require("prompt-sync")({ sigint: true });
-const {validateFormat, messageAndBits } = require("./utilService")
+const { validateFormat, messageAndBits } = require("./utilService")
 
 const { sshConf, target } = require("./sshConfig");
 const { error, log } = require("console");
-const Client = require("ssh2").Client    
+const Client = require("ssh2").Client
 const sshClient = new Client();
 
 const parseUser = (data) => {
@@ -29,7 +29,7 @@ sshClient.on('ready', () => {
             stream.write("00010benj1" + response)
         })
         stream.on("close", () => {
-        sshClient.end()
+            sshClient.end()
         })
     })
 })

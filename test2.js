@@ -1,6 +1,6 @@
 const prompt = require("prompt-sync")({ sigint: true });
 const { sshConf, target } = require("./sshConfig")
-const Client = require("ssh2").Client    
+const Client = require("ssh2").Client
 
 const sshClient = new Client();
 
@@ -19,10 +19,10 @@ sshClient.on('ready', () => {
         stream.on("data", (data) => {
             const response = data.toString().substring(10).split("|")[1];
             console.log(`[Services-benj2] \tData:`, data.toString())
-            stream.write("00010benj2"+response)
+            stream.write("00010benj2" + response)
         })
         stream.on("close", () => {
-        sshClient.end()
+            sshClient.end()
         })
     })
 })

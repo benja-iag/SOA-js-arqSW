@@ -1,6 +1,6 @@
 import prompt from "prompt-sync"
 const input = prompt({ sigint: true })
-import { services } from "../ClientServices.js"
+import { services } from "../clientServices.js"
 
 export const isValidOption = (option) => {
     if (isNaN(option)) return false
